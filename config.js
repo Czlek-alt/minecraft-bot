@@ -5,22 +5,22 @@ module.exports = {
     //Your bot data
     bot: {
         //PASTE YOUR DISCORD BOT TOKEN IN DATA.JSON FILE (more secure) - https://tinyurl.com/discordbot-token
-        prefix: "", //Your custom prefix of the bot, like "!" or "."
+        prefix: "!", //Your custom prefix of the bot, like "!" or "."
         presence: "", //Custom activity/status text
-        status: "",  //You can choose: ONLINE, IDLE, DND (do not disturb), INVISIBLE
-        activity: "", //You can choose: PLAYING, LISTENING, WATCHING, COMPETING
-        guildID: "", //Your Discord server guild ID
+        status: "ONLINE",  //You can choose: ONLINE, IDLE, DND (do not disturb), INVISIBLE
+        activity: "PLAYING", //You can choose: PLAYING, LISTENING, WATCHING, COMPETING
+        guildID: "1268489826764587072", //Your Discord server guild ID
     },
 
     //Your Minecraft server data
     server: {
-        name: "", //Your server name
-        type: "", //"java" or "bedrock"
-        ip: "", //IP of your server - do not include port - e.g. "mc.hypixel.net"
+        name: "SkyFox", //Your server name
+        type: "java", //"java" or "bedrock"
+        ip: "skyfox.icsv.pl", //IP of your server - do not include port - e.g. "mc.hypixel.net"
         port: "", //PORT of your server - empty => default port (JA 25565, BE 19132)
-        icon: "", //Link to icon - like "https://website.com/icon.png"
-        version: "", //Minecraft version of sever
-        vote: "" //Vote link - like "https://minecraftpocket-servers.com/server/80103/vote/"
+        icon: "https://cdn.discordapp.com/icons/1238926670992506922/8fd00e3a734ee94f4c893e6ce458baa4.webp?size=4096", //Link to icon - like "https://website.com/icon.png"
+        version: "1.20.1", //Minecraft version of sever
+        vote: "http://www.mclist.pl/serwer/skyfox.icsv.pl" //Vote link - like "https://minecraftpocket-servers.com/server/80103/vote/"
     },
 
     //Basic code settings
@@ -33,24 +33,24 @@ module.exports = {
         readyScan: true, //On bot's start, send to console server's essential information?
         //Features:
         randomColor: false, //Enable random hex color generator for embeds? Overwrites embeds settings!
-        statusCH: false, //Enable auto-changing status message?
+        statusCH: true, //Enable auto-changing status message?
         votingCH: false, //Enable voting channel?
         countingCH: false, //Enable counting channel?
         //Advanced:
-        removeServerType: false, //Remove "Spigot", "Purpur" etc. from version and leave only "1.18", "1.19" etc.?
+        removeServerType: true, //Remove "Spigot", "Purpur" etc. from version and leave only "1.18", "1.19" etc.?
         showDefaultPort: false //Show the server port behind IP if its default (25565, 19132) (primarily statusCH feature)?
     },
 
     //Period of auto changing status if you are using {onlinePlayers} or {maxPlayers} in bot's presence
     autoStatus: {
-        time: "10min", //Period of auto changing status - like "3min", "20s" or "1min" etc.
-        offline: "Offline" //Changes bot's presence to this text if the server is offline / not found
+        time: "1s", //Period of auto changing status - like "3min", "20s" or "1min" etc.
+        offline: "IDLE" //Changes bot's presence to this text if the server is offline / not found
     },
 
     //Auto changing status message
     statusCH: {
-        channelID: "",
-        time: "30s" //Period of updating status message - like "3min", "20s" or "1min" etc.
+        channelID: "1268489827309981720",
+        time: "1s" //Period of updating status message - like "3min", "20s" or "1min" etc.
     },
 
     //Voting channel - https://mb.petyxbron.cz/config/config-info#voting-ch
@@ -82,8 +82,8 @@ module.exports = {
     //Embeds settings
     embeds: {
         colors: {
-            normal: "",  //Main/successful color of embeds - choose HEX color here: https://htmlcolorcodes.com
-            error: "", //Error/unsuccessful color of embeds - choose HEX color here: https://htmlcolorcodes.com
+            normal: "6EFC17",  //Main/successful color of embeds - choose HEX color here: https://htmlcolorcodes.com
+            error: "FC3A17", //Error/unsuccessful color of embeds - choose HEX color here: https://htmlcolorcodes.com
         }
     },
 
@@ -100,12 +100,12 @@ module.exports = {
 
     //All commands settings
     commands: {
-        enableNormals: true, //This requires having "message content" intent allowed on the Discord developer portal site
-        enableSlashes: true, //If you want to disable only specific slashes, leave this true and go down
+        enableNormals: false, //This requires having "message content" intent allowed on the Discord developer portal site
+        enableSlashes: false, //If you want to disable only specific slashes, leave this true and go down
         //List of all commands:
         help: {
-            enableNormal: true, //Enables normal command
-            enableSlash: true, //Enables slash command
+            enableNormal: false, //Enables normal command
+            enableSlash: false, //Enables slash command
             aliases: [ //Only for normal commands
                 "commands", "menu"
             ],
