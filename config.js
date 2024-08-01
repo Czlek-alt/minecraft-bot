@@ -6,7 +6,7 @@ module.exports = {
     bot: {
         //PASTE YOUR DISCORD BOT TOKEN IN DATA.JSON FILE (more secure) - https://tinyurl.com/discordbot-token
         prefix: "!", //Your custom prefix of the bot, like "!" or "."
-        presence: "", //Custom activity/status text
+        presence: "{onlinePlayers}/{maxPlayers} graczy 🎮", //Custom activity/status text
         status: "ONLINE",  //You can choose: ONLINE, IDLE, DND (do not disturb), INVISIBLE
         activity: "PLAYING", //You can choose: PLAYING, LISTENING, WATCHING, COMPETING
         guildID: "1268489826764587072", //Your Discord server guild ID
